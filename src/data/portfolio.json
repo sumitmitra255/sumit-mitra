@@ -1,0 +1,255 @@
+{
+  "profile": {
+    "name": "Sumit Mitra",
+    "title": "Senior Software Engineer | Full-Stack Architect | GenAI Builder",
+    "headline": "Turning your Ideas into Full-Stack Scalable Applications & Solving Real-World Problems | GenAI Builder | Cloud-Native & Event-Driven Architect | Full Stack Developer | Node React AI ML Python",
+    "location": "Bengaluru, Karnataka, India",
+    "pronouns": "He/Him",
+    "profileUrl": "www.linkedin.com/in/sumitmitra25",
+    "profileImage": "[profile-image-url]",
+    "backgroundImage": "[background-image-url]",
+    "about": "💡 Success is the result of preparation, hard work, and learning from failure. Engineering scalable, intelligent systems that drive real-world impact. With over a decade of experience across startups and enterprise-grade platforms, I specialize in building cloud-native applications, architecting microservices, and integrating AI into production systems.",
+    "stats": {
+      "followers": 5580,
+      "connections": 500,
+      "profileViews": 1015,
+      "postImpressions": 20494,
+      "searchAppearances": 86
+    },
+    "contact": {
+      "github": "https://github.com/sumitmitra255",
+      "linkedinProfile": "www.linkedin.com/in/sumitmitra25"
+    }
+  },
+  "currentRole": {
+    "company": "Saranyu Technologies",
+    "position": "Senior Software Engineer",
+    "duration": "Oct 2022 - Present (3 yrs 2 mos)",
+    "location": "Bengaluru, Karnataka, India",
+    "employmentType": "Full-time",
+    "description": "Leading design and development of cloud-native platforms with expertise in AWS, Kafka, RabbitMQ; architecting full-stack solutions using Node.js, PHP, Python, Go, React.js, Next.js; integrating GenAI using Hugging Face and custom LLM pipelines; designing event-driven microservices; mentoring junior developers"
+  },
+  "experience": [
+    {
+      "company": "Saranyu Technologies",
+      "position": "Senior Software Engineer",
+      "duration": "Oct 2022 - Present (3 yrs 2 mos)",
+      "location": "Bengaluru, Karnataka, India",
+      "employmentType": "Full-time",
+      "description": "Cloud-native platform development, AWS/Kafka/RabbitMQ architecture, full-stack solutions, GenAI integration, microservices design, team mentoring"
+    },
+    {
+      "company": "Saranyu Technologies",
+      "position": "Software Engineer",
+      "duration": "Jun 2021 - Present (4 yrs 6 mos)",
+      "location": "Bengaluru, Karnataka, India",
+      "employmentType": "Full-time",
+      "description": "PHP-based AI video metadata extraction, custom RTMP-based live streaming tool for multi-platform broadcasting (YouTube, Facebook, LinkedIn), real-time encoding, adaptive bitrate handling"
+    },
+    {
+      "company": "Angel One",
+      "position": "Backend Lead",
+      "duration": "Mar 2024 - Present (1 yr 9 mos)",
+      "location": "Remote",
+      "employmentType": "Full-time",
+      "description": "Backend architecture for angelone.in, Python fintech data pipelines on AWS RDS, Fastify.js backend optimization, headless CMS with Next.js frontend, Kafka-based live stock market data streaming, AWS ECS containerized deployments, WordPress CMS customization"
+    },
+    {
+      "company": "Freelance | Self-Employed",
+      "position": "Freelance Software Engineer",
+      "duration": "May 2015 - Present (10 yrs 7 mos)",
+      "location": "Remote",
+      "employmentType": "Freelance",
+      "description": "Independent software engineering services"
+    }
+  ],
+  "education": [
+    {
+      "institution": "Ramaiah Institute Of Technology",
+      "degree": "Master of Computer Applications (MCA)",
+      "field": "Computer Applications",
+      "duration": "2016 - 2019",
+      "description": "Activities: coding, programming, presentation. Achievements: 2nd place in institute-wide final-year project competition, won hackathon for real-world problem solving"
+    },
+    {
+      "institution": "DCT Academy",
+      "degree": "Postgraduate Degree",
+      "field": "Computer Software Engineering",
+      "duration": "2020 - 2020",
+      "description": "Led hackathon team developing MERN stack web app for real-time network list manipulation"
+    }
+  ],
+  "topSkills": [
+    "Transformers",
+    "Python",
+    "JavaScript",
+    "Node.js",
+    "Artificial Intelligence (AI)",
+    "Generative AI Tools",
+    "Kubernetes",
+    "Ansible",
+    "AWS",
+    "React",
+    "Golang",
+    "Rust",
+    "PHP",
+    "Java"
+  ],
+  "allSkills": [
+    "Generative AI Tools",
+    "Node.js",
+    "Python",
+    "JavaScript",
+    "React",
+    "Next.js",
+    "Golang",
+    "Rust",
+    "PHP",
+    "Java",
+    "Kubernetes",
+    "Ansible",
+    "AWS Lambda",
+    "AWS ECS",
+    "AWS RDS",
+    "CloudFormation",
+    "Elastic Beanstalk",
+    "Kafka",
+    "RabbitMQ",
+    "API Gateway",
+    "Microservices",
+    "Event-Driven Architecture",
+    "CQRS",
+    "Hugging Face",
+    "NumPy",
+    "Pandas",
+    "SciPy",
+    "Matplotlib",
+    "WordPress",
+    "FastAPI",
+    "Fastify.js",
+    "MongoDB",
+    "PostgreSQL",
+    "Redis",
+    "Docker",
+    "CI/CD",
+    "DevOps",
+    "System Design",
+    "RTMP Streaming",
+    "Live Video Processing",
+    "headless CMS"
+  ],
+  "certifications": [
+    {
+      "title": "Artificial intelligence Ready",
+      "issuer": "Naukri.com",
+      "issuedDate": "Nov 2025",
+      "credentialUrl": "https://certificate.codingninjas.com/certificate/c5e10a5d6bac0e17/BadgesSamuraiCertificate",
+      "skills": ["Artificial Intelligence (AI)", "Machine Learning"]
+    },
+    {
+      "title": "Mastering Rust: Building safe and Efficient Software",
+      "issuer": "Udemy",
+      "issuedDate": "Oct 2025",
+      "credentialId": "UC-a5b9cf61-675f-4ed1-b323-50333c6c1e4d",
+      "skills": ["Rust", "Programming"]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Angelone.in",
+      "duration": "Mar 2024 - Present",
+      "company": "Saranyu Technologies",
+      "url": "www.angelone.in",
+      "description": "Fintech platform with stock market data integration",
+      "skills": [
+        "AWS",
+        "FastAPI",
+        "Golang",
+        "Kafka",
+        "PostgreSQL",
+        "React",
+        "Next.js"
+      ],
+      "contributors": 4
+    },
+    {
+      "name": "DCT Hackathon",
+      "company": "DCT Academy",
+      "description": "MERN stack web application for real-time network list manipulation",
+      "skills": ["React", "Node.js", "MongoDB"]
+    }
+  ],
+  "services": [
+    "Custom Software Development",
+    "Application Development",
+    "Mobile Application Development",
+    "Web Development"
+  ],
+  "featuredContent": [
+    {
+      "type": "Post",
+      "title": "What Makes Microservices Work in the Real World",
+      "description": "14 microservice architecture patterns for scalable systems",
+      "tags": [
+        "Microservices",
+        "SystemDesign",
+        "CloudArchitecture",
+        "DistributedSystems"
+      ]
+    },
+    {
+      "type": "Post",
+      "title": "Coding patterns aren't just interview prep. They're architectural blueprints for scalable thinking.",
+      "description": "23 essential coding patterns with real-world use cases",
+      "tags": ["CodingPatterns", "SoftwareEngineering", "Algorithms"]
+    },
+    {
+      "type": "Post",
+      "title": "Why I stopped treating reads and writes the same way",
+      "description": "CQRS - Command Query Responsibility Segregation pattern",
+      "tags": ["CQRS", "SoftwareArchitecture", "EventDriven"]
+    }
+  ],
+  "honors": [
+    {
+      "title": "Recognition For Contribution in various Projects",
+      "issuer": "Saranyu Technologies",
+      "issuedDate": "Jan 2023",
+      "description": "Grateful and humbled to be recognized for contributions to various office projects"
+    },
+    {
+      "title": "Recognition For Contribution in various Projects",
+      "issuer": "Saranyu Technologies",
+      "issuedDate": "Jan 2021",
+      "description": "Recognized for dedication, creativity, and collaborative spirit across various projects"
+    }
+  ],
+  "recommendations": [
+    {
+      "recommender": "Saikat Paul",
+      "title": "First degree connection - Technology Consulting | Full Stack Developer | @PWC | D&A",
+      "date": "May 6, 2024",
+      "relationship": "Worked together on same team",
+      "text": "I highly recommend Sumit as a senior software engineer with expertise in JavaScript and Python. Consistent technical skills, problem-solving abilities, clean code writing, great team player, willing to share knowledge."
+    }
+  ],
+  "languages": [
+    "Assamese (Professional working proficiency)",
+    "Bengali (Native or bilingual proficiency)"
+  ],
+  "interests": [
+    "Aurimas Griciūnas - Founder @ SwirlAI",
+    "Deeksha Pandey - SWE III at Google, AI Computing"
+  ],
+  "causes": ["Environment"],
+  "openToWork": {
+    "status": true,
+    "roles": [
+      "Full Stack Engineer",
+      "Frontend Developer",
+      "Back End Developer",
+      "React Developer",
+      "Javascript Developer"
+    ]
+  }
+}
