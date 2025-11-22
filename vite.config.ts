@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react-swc'
 import path from 'path'
 import { componentTagger } from 'lovable-tagger'
 
-const base = '/sumit_porfolio/' 
+const base = '/sumit-mitra/' 
  
 
 // https://vitejs.dev/config/

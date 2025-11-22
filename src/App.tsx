@@ -13,9 +13,11 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter basename="/sumit_porfolio">
+      <BrowserRouter basename="/sumit-mitra">
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/sumit-mitra/" element={<Index />} />
+          <Route path="/sumit-mitra" element={<Index />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

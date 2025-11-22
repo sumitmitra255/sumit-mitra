@@ -48,14 +48,14 @@ const Contact = () => {
                 </a>
 
                 <a
-                  href="mailto:contact@sumitmitra.dev"
+                  href="mitrasumit1@gmail.com"
                   className="glass-card p-6 rounded-xl hover-lift flex flex-col items-center gap-4 group"
                 >
                   <div className="p-4 bg-primary/10 rounded-full group-hover:bg-primary/20 transition-colors">
                     <Mail className="w-8 h-8 text-primary" />
                   </div>
                   <div>
-                    <p className="font-heading font-semibold mb-1">Email</p>
+                    <p className="font-heading font-semibold mb-1">mitrasumit1@gmail.com</p>
                     <p className="text-sm text-muted-foreground">Send a message</p>
                   </div>
                 </a>
@@ -66,9 +66,9 @@ const Contact = () => {
                   📍 Based in {portfolioData.profile.location}
                 </p>
                 <div className="flex flex-wrap justify-center gap-2 text-sm text-muted-foreground">
-                  <span>{portfolioData.profile.stats.connections}+ connections</span>
+                  <span>Mobile</span>
                   <span>•</span>
-                  <span>{portfolioData.profile.stats.followers} followers</span>
+                  <span>+91 9002395305</span>
                   <span>•</span>
                   <span>Open to opportunities</span>
                 </div>
