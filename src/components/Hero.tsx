@@ -75,9 +75,13 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <ArrowDown className="w-6 h-6 text-muted-foreground" />
-        </div>
+        <button
+          onClick={() => scrollToSection('contact')}
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce bg-transparent border-none cursor-pointer"
+          aria-label="Scroll to contact section"
+        >
+          <ArrowDown className="w-6 h-6 text-muted-foreground hover:text-primary transition-colors" />
+        </button>
       </div>
     </section>
   );
