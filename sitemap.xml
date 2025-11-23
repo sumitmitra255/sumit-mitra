@@ -23,4 +23,28 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://sumitmitra255.github.io/blog</loc>
+    <lastmod>2025-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sumitmitra255.github.io/blogs/getting-started-react-typescript</loc>
+    <lastmod>2025-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sumitmitra255.github.io/blogs/building-scalable-microservices</loc>
+    <lastmod>2025-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sumitmitra255.github.io/blogs/modern-css-techniques</loc>
+    <lastmod>2025-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
