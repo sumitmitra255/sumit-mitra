@@ -5,42 +5,22 @@
         xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-
-  <!-- Main homepage -->
   <url>
-    <loc>https://sumitmitra255.github.io/sumit-mitra/</loc>
-    <lastmod>2025-11-22</lastmod>
+    <loc>https://sumitmitra255.github.io/</loc>
+    <lastmod>2025-11-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-
-  <!-- Portfolio sections (if they become separate routes in future) -->
   <url>
-    <loc>https://sumitmitra255.github.io/sumit-mitra/#about</loc>
-    <lastmod>2025-11-22</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://sumitmitra255.github.io/sumit-mitra/</loc>
+    <lastmod>2025-11-23</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://sumitmitra255.github.io/sumit-mitra/#experience</loc>
-    <lastmod>2025-11-22</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://sumitmitra255.github.io/sumit-mitra</loc>
+    <lastmod>2025-11-23</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <url>
-    <loc>https://sumitmitra255.github.io/sumit-mitra/#projects</loc>
-    <lastmod>2025-11-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://sumitmitra255.github.io/sumit-mitra/#contact</loc>
-    <lastmod>2025-11-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
 </urlset>
