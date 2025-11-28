@@ -18,8 +18,7 @@ const App = () => (
       <BrowserRouter basename="/sumit-mitra">
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/sumit-mitra/" element={<Index />} />
-          <Route path="/sumit-mitra" element={<Index />} />
+          <Route path="/home" element={<Index />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blogs/:slug" element={<Blogs />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
