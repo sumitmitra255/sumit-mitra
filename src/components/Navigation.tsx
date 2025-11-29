@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 const Navigation = () => {
   const navigate = useNavigate();
@@ -63,6 +64,7 @@ const Navigation = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
               </button>
             ))}
+            <ThemeSwitcher />
           </div>
 
           {/* Mobile Menu Button */}
@@ -89,6 +91,12 @@ const Navigation = () => {
                   {link.name}
                 </button>
               ))}
+              <div className="pt-2 border-t border-border/50 flex justify-between items-center">
+                <span className="text-sm font-medium text-muted-foreground">
+                  Theme
+                </span>
+                <ThemeSwitcher />
+              </div>
             </div>
           </div>
         )}

@@ -99,6 +99,61 @@ All colors MUST be HSL.
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 142 71% 45%;
   }
+
+  /* Material Design Themes */
+  .theme-green {
+    --primary: 151 83% 34%; /* #0F9D58 */
+    --ring: 151 83% 34%;
+    --accent: 151 83% 34%;
+    --gradient-start: 151 83% 34%;
+    --gradient-end: 151 83% 24%;
+    --glass-border: 151 83% 34%;
+  }
+
+  .theme-blue {
+    --primary: 217 89% 61%; /* #4285F4 */
+    --ring: 217 89% 61%;
+    --accent: 217 89% 61%;
+    --gradient-start: 217 89% 61%;
+    --gradient-end: 217 89% 51%;
+    --glass-border: 217 89% 61%;
+  }
+
+  .theme-orange {
+    --primary: 36 100% 50%; /* #FF9800 */
+    --ring: 36 100% 50%;
+    --accent: 36 100% 50%;
+    --gradient-start: 36 100% 50%;
+    --gradient-end: 36 100% 40%;
+    --glass-border: 36 100% 50%;
+  }
+
+  .theme-purple {
+    --primary: 291 64% 42%; /* #9C27B0 */
+    --ring: 291 64% 42%;
+    --accent: 291 64% 42%;
+    --gradient-start: 291 64% 42%;
+    --gradient-end: 291 64% 32%;
+    --glass-border: 291 64% 42%;
+  }
+
+  .theme-red {
+    --primary: 5 69% 54%; /* #DB4437 */
+    --ring: 5 69% 54%;
+    --accent: 5 69% 54%;
+    --gradient-start: 5 69% 54%;
+    --gradient-end: 5 69% 44%;
+    --glass-border: 5 69% 54%;
+  }
+
+  .theme-teal {
+    --primary: 174 100% 29%; /* #009688 */
+    --ring: 174 100% 29%;
+    --accent: 174 100% 29%;
+    --gradient-start: 174 100% 29%;
+    --gradient-end: 174 100% 19%;
+    --glass-border: 174 100% 29%;
+  }
 }
 
 @layer base {
