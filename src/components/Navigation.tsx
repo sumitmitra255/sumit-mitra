@@ -30,7 +30,7 @@ const Navigation = () => {
     { name: "Home", id: "home", route: "/home#home" },
     { name: "About", id: "about", route: "/home#about" },
     { name: "Experience", id: "experience", route: "/home#experience" },
-    { name: "Projects", id: "projects", route: "/home#projects" },
+    // { name: "Projects", id: "projects", route: "/home#projects" },
     { name: "Skills", id: "skills", route: "/home#skills" },
     { name: "Contact", id: "contact", route: "/home#contact" },
     { name: "Blog", id: "blog", route: "/blog" },
