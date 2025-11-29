@@ -112,7 +112,7 @@ const Experience = () => {
             </div>
             <div className="glass-card p-6 rounded-xl text-center hover-lift">
               <div className="text-3xl font-heading font-bold text-primary mb-1">
-                {portfolioData.projects.length}
+                8+
               </div>
               <div className="text-sm text-muted-foreground">
                 Major Projects
