@@ -1,17 +1,31 @@
 import React, { useState, useEffect, useCallback, useRef } from "react";
+import Navigation from "./Navigation";
+import Footer from "./Footer";
+
+// --- Types ---
+interface Point {
+  x: number;
+  y: number;
+}
+
+interface Food extends Point {
+  icon: string;
+}
+
+type Direction = "UP" | "DOWN" | "LEFT" | "RIGHT";
 
 // --- Constants ---
 const GRID_SIZE = 20;
-const INITIAL_SNAKE = [{ x: 10, y: 10 }];
+const INITIAL_SNAKE: Point[] = [{ x: 10, y: 10 }];
 // Define a list of food icons to be chosen randomly
 const FRUIT_ICONS = ["🍎", "🍌", "🍇", "🍍", "🥝", "🍓", "🥭", "🍉"];
-const INITIAL_FOOD = { x: 5, y: 5, icon: FRUIT_ICONS[0] }; // Initialize with a starting icon
+const INITIAL_FOOD: Food = { x: 5, y: 5, icon: FRUIT_ICONS[0] }; // Initialize with a starting icon
 const GAME_SPEED_MS = 150;
 
 // Utility function to generate a random food position and select a random icon
-const generateFood = (snake) => {
-  let newFood;
-  let isSnakeBody;
+const generateFood = (snake: Point[]): Food => {
+  let newFood: Point;
+  let isSnakeBody: boolean;
   do {
     // Generate coordinates within the grid boundaries (0 to GRID_SIZE - 1)
     newFood = {
@@ -31,18 +45,18 @@ const generateFood = (snake) => {
   return { ...newFood, icon };
 };
 
-// --- Main App Component ---
-const App = () => {
-  const [snake, setSnake] = useState(INITIAL_SNAKE);
-  const [food, setFood] = useState(INITIAL_FOOD);
-  const [direction, setDirection] = useState("RIGHT");
-  const [score, setScore] = useState(0);
-  const [isGameOver, setIsGameOver] = useState(false);
-  const [isGamePaused, setIsGamePaused] = useState(false);
-  const [isGameStarted, setIsGameStarted] = useState(false);
+// --- Main Snake Game Component ---
+const SnakeGame: React.FC = () => {
+  const [snake, setSnake] = useState<Point[]>(INITIAL_SNAKE);
+  const [food, setFood] = useState<Food>(INITIAL_FOOD);
+  const [direction, setDirection] = useState<Direction>("RIGHT");
+  const [score, setScore] = useState<number>(0);
+  const [isGameOver, setIsGameOver] = useState<boolean>(false);
+  const [isGamePaused, setIsGamePaused] = useState<boolean>(false);
+  const [isGameStarted, setIsGameStarted] = useState<boolean>(false);
 
   // Use a ref to store the current direction for the game loop
-  const directionRef = useRef(direction);
+  const directionRef = useRef<Direction>(direction);
 
   useEffect(() => {
     directionRef.current = direction;
@@ -55,7 +69,7 @@ const App = () => {
 
     // 1. Calculate the new head position based on current direction
     const currentDirection = directionRef.current;
-    let newHead = { x: snake[0].x, y: snake[0].y };
+    let newHead: Point = { x: snake[0].x, y: snake[0].y };
 
     switch (currentDirection) {
       case "UP":
@@ -128,11 +142,41 @@ const App = () => {
     return () => clearInterval(gameLoopId);
   }, [isGameStarted, isGameOver, isGamePaused, moveSnake]);
 
+  // --- Game Controls ---
+  const handleStart = useCallback(() => {
+    if (!isGameStarted) {
+      setIsGameStarted(true);
+      setIsGameOver(false);
+      setIsGamePaused(false);
+      setDirection("RIGHT");
+      // Ensure the initial food also has an icon
+      setFood(generateFood(INITIAL_SNAKE));
+    }
+  }, [isGameStarted]);
+
+  const handleRestart = useCallback(() => {
+    // Reset all game state and start immediately
+    setSnake(INITIAL_SNAKE);
+    setFood(generateFood(INITIAL_SNAKE));
+    setDirection("RIGHT");
+    setScore(0);
+    setIsGameOver(false);
+    setIsGamePaused(false);
+    setIsGameStarted(true); // Restart implies immediate start
+    directionRef.current = "RIGHT"; // Reset the ref as well
+  }, []);
+
+  const togglePause = useCallback(() => {
+    if (isGameStarted && !isGameOver) {
+      setIsGamePaused((prev) => !prev);
+    }
+  }, [isGameStarted, isGameOver]);
+
   // --- Keyboard Input Handler ---
   const handleKeyDown = useCallback(
-    (e) => {
+    (e: KeyboardEvent) => {
       const key = e.key.toUpperCase();
-      const newDir = key.replace("ARROW", "");
+      const newDir = key.replace("ARROW", "") as Direction;
       const currentDir = directionRef.current;
 
       // Prevent immediate reversal
@@ -149,7 +193,7 @@ const App = () => {
         ["UP", "DOWN", "LEFT", "RIGHT"].includes(newDir) &&
         !isOpposite
       ) {
-        setDirection(newDir);
+        setDirection(newDir as Direction);
       }
 
       // Handle pause/resume with spacebar
@@ -168,7 +212,7 @@ const App = () => {
         handleStart();
       }
     },
-    [isGameOver, isGameStarted]
+    [isGameOver, isGameStarted, handleRestart, handleStart]
   );
 
   useEffect(() => {
@@ -177,40 +221,10 @@ const App = () => {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [handleKeyDown]);
 
-  // --- Game Controls ---
-  const handleStart = () => {
-    if (!isGameStarted) {
-      setIsGameStarted(true);
-      setIsGameOver(false);
-      setIsGamePaused(false);
-      setDirection("RIGHT");
-      // Ensure the initial food also has an icon
-      setFood(generateFood(INITIAL_SNAKE));
-    }
-  };
-
-  const handleRestart = () => {
-    // Reset all game state and start immediately
-    setSnake(INITIAL_SNAKE);
-    setFood(generateFood(INITIAL_SNAKE));
-    setDirection("RIGHT");
-    setScore(0);
-    setIsGameOver(false);
-    setIsGamePaused(false);
-    setIsGameStarted(true); // Restart implies immediate start
-    directionRef.current = "RIGHT"; // Reset the ref as well
-  };
-
-  const togglePause = () => {
-    if (isGameStarted && !isGameOver) {
-      setIsGamePaused((prev) => !prev);
-    }
-  };
-
   // --- Rendering Functions ---
 
   // Renders the individual cells of the game board
-  const renderCell = (x, y) => {
+  const renderCell = (x: number, y: number) => {
     const isSnake = snake.some((segment) => segment.x === x && segment.y === y);
     const isFood = food.x === x && food.y === y;
     const isHead = snake[0].x === x && snake[0].y === y;
@@ -224,32 +238,27 @@ const App = () => {
 
       // Determine the rotation of the eye/face based on direction
       let faceIcon = "•"; // Simple dot for the face
-      let transform = "";
 
       switch (directionRef.current) {
         case "UP":
           faceIcon = "▲"; // Up arrow for direction hint
-          transform = "rotate(0deg)";
           break;
         case "DOWN":
           faceIcon = "▼"; // Down arrow
-          transform = "rotate(0deg)";
           break;
         case "LEFT":
           faceIcon = "◀"; // Left arrow
-          transform = "rotate(0deg)";
           break;
         case "RIGHT":
         default:
           faceIcon = "▶"; // Right arrow
-          transform = "rotate(0deg)";
           break;
       }
 
       return (
         <div
           className={classes}
-          style={{ transform: transform, color: "white" }}
+          style={{ color: "white" }}
         >
           {faceIcon}
         </div>
@@ -296,13 +305,15 @@ const App = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gray-800 flex flex-col items-center justify-center p-4 font-mono">
-      <h1 className="text-4xl font-bold mb-6 text-green-400 drop-shadow-lg">
-        SNAKE React (Wraparound)
-      </h1>
+    <div className="min-h-screen flex flex-col transition-all duration-300">
+      <Navigation />
+      <main className="flex-grow flex flex-col items-center justify-center p-4 font-mono text-white pt-24 pb-12 bg-gray-800">
+        <h1 className="text-4xl font-bold mb-6 text-green-400 drop-shadow-lg">
+          SNAKE React (Wraparound)
+        </h1>
 
       <div className="w-full max-w-lg mb-4 flex justify-between items-center bg-gray-700/50 p-3 rounded-lg shadow-inner">
-        <div className="text-lg text-white">
+        <div className="text-lg">
           Score: <span className="font-bold text-yellow-300">{score}</span>
         </div>
         <div className="text-sm text-gray-300">
@@ -427,8 +438,10 @@ const App = () => {
           )}
         </button>
       </div>
+      </main>
+      <Footer />
     </div>
   );
 };
 
-export default App;
+export default SnakeGame;
